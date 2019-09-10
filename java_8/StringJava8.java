@@ -1,3 +1,4 @@
+package java_8;
 import java.util.StringJoiner;
 import java.util.stream.IntStream;
 
