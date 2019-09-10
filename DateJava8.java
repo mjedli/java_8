@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
  * @author mjedli
  *
  */
-public class Date {
+public class DateJava8 {
 
 	/**
 	 * @param args
