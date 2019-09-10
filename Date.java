@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.chrono.ChronoLocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 /**
@@ -19,7 +19,7 @@ public class Date {
 	 */
 	public static void main(String[] args) {
 		
-		//Instant - Duration
+		// Instant - Duration
 		
 		Instant instant1 = Instant.now();
 		
@@ -34,7 +34,7 @@ public class Date {
 		
 		System.out.println(duration.toMillis());
 
-		//LocalDate
+		// LocalDate
 		
 		LocalDate now = LocalDate.now();
 		
@@ -46,7 +46,7 @@ public class Date {
 		
 		System.out.println(now1.until(now).getYears() + "years");
 		
-		//LocalTime
+		// LocalTime
 		
 		LocalTime time = LocalTime.now();
 		
@@ -54,13 +54,16 @@ public class Date {
 		
 		System.out.println(LocalTime.of(2, 4).plusHours(2));
 		
-		//ZoneTime
+		// ZoneTime
 		
 		System.out.println(ZoneId.getAvailableZoneIds());
 		System.out.println(ZoneId.of("Etc/GMT+8"));
 		
-		ZonedDateTime cuurent = ZonedDateTime.of(LocalDate.of(2000, Month.APRIL, 2), LocalTime.of(2,20), ZoneId.of("Etc/GMT+8"));
-		System.out.println(cuurent);
+		ZonedDateTime current = ZonedDateTime.of(LocalDate.of(2000, Month.APRIL, 2), LocalTime.of(2,20), ZoneId.of("Etc/GMT+8"));
+		System.out.println(current);
+		
+		// DateTime Formatter
+		System.out.println(DateTimeFormatter.ISO_DATE_TIME.format(current));
 	}
 
 }
