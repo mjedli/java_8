@@ -33,27 +33,27 @@ public class DateJava8 {
 		
 		Duration duration = Duration.between(instant1, instant2);
 		
-		System.out.println(duration.toMillis());
+		System.out.println(duration.toMillis()); //500
 
 		// LocalDate
 		
 		LocalDate now = LocalDate.now();
 		
-		System.out.println(now);
+		System.out.println(now); //2019-09-10
 		
 		LocalDate now1 = LocalDate.of(1900, Month.DECEMBER, 2);
 		
-		System.out.println(now1);
+		System.out.println(now1); //1900-12-02
 		
-		System.out.println(now1.until(now).getYears() + "years");
+		System.out.println(now1.until(now).getYears() + "years"); // 118years
 		
 		// LocalTime
 		
 		LocalTime time = LocalTime.now();
 		
-		System.out.println(LocalTime.of(2, 4));
+		System.out.println(LocalTime.of(2, 4)); //02:04 
 		
-		System.out.println(LocalTime.of(2, 4).plusHours(2));
+		System.out.println(LocalTime.of(2, 4).plusHours(2)); //04:04
 		
 		// ZoneTime
 		
