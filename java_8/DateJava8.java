@@ -61,10 +61,10 @@ public class DateJava8 {
 		System.out.println(ZoneId.of("Etc/GMT+8"));
 		
 		ZonedDateTime current = ZonedDateTime.of(LocalDate.of(2000, Month.APRIL, 2), LocalTime.of(2,20), ZoneId.of("Etc/GMT+8"));
-		System.out.println(current);
+		System.out.println(current); // 2000-04-02T02:20:00-08:00[Etc/GMT+8]
 		
 		// DateTime Formatter
-		System.out.println(DateTimeFormatter.ISO_DATE_TIME.format(current));
+		System.out.println(DateTimeFormatter.ISO_DATE_TIME.format(current)); // 2000-04-02T02:20:00-08:00[Etc/GMT+8]
 	}
 
 }
