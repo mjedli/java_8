@@ -30,7 +30,7 @@ public class ComparatorJava8 {
 		
 		System.out.println(collection); //[e1, e2, e3]
 		
-		// comparingby
+		// comparing
 		
 		Product p1 = new Product();
 		p1.setNumber(2);
