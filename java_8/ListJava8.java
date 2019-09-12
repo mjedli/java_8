@@ -75,7 +75,6 @@ public class ListJava8 {
 		
 		System.out.println(result); // E2
 		
-		
 		String result1 = collection.stream().filter(e -> "E0".equals(e)).findAny().orElse("not found");
 		
 		System.out.println(result1); // not found
