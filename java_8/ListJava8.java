@@ -65,6 +65,17 @@ public class ListJava8 {
 		collection.sort(cmp);
 		System.out.println(collection); // [E1, E2, E3, E4]
 		
+		
+		// stream filter
+		
+		String result = collection.stream().filter(e -> "E2".equals(e)).findAny().orElse("");
+		
+		System.out.println(result); // E2
+		
+		
+		String result1 = collection.stream().filter(e -> "E0".equals(e)).findAny().orElse("not found");
+		
+		System.out.println(result1); // not found
 	}
 
 }
