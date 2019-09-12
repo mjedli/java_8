@@ -6,7 +6,10 @@ package java_8;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 import java.util.function.UnaryOperator;
+import static java.util.stream.Collectors.toSet;
+import static java.util.stream.Collectors.counting;
 
 /**
  * @author mjedli
@@ -76,6 +79,16 @@ public class ListJava8 {
 		String result1 = collection.stream().filter(e -> "E0".equals(e)).findAny().orElse("not found");
 		
 		System.out.println(result1); // not found
+		
+		// collect
+		
+		Set<String> result3 = collection.stream().collect(toSet());
+		
+		System.out.println(result3); //[E1, E2, E3, E4]
+		
+		Long result4 = collection.stream().collect(counting());
+		
+		System.out.println(result4); // 4
 	}
 
 }
