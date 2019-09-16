@@ -88,6 +88,23 @@ public class ListJava8 {
 		Long result4 = collection.stream().collect(counting());
 		
 		System.out.println(result4); // 4
+		
+		// map
+		
+		Product p1 = new Product();
+		p1.setNumber(2);
+		p1.setType("E1");
+		
+		Product p2 = new Product();
+		p2.setNumber(1);
+		p2.setType("E2");
+		
+		List<Product> l = Arrays.asList(p1 , p2);
+		
+		Set<String> result5 = l.stream().filter(e -> "E2".equals(e.getType())).map(Product::getType).collect(toSet());
+		
+		System.out.println(result5); // [E2]
+		
 	}
 
 }
